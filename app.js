@@ -5,9 +5,16 @@ $(document).ready(function() {
         let inputValue = $(".user-input").val();
         localStorage.setItem("testStorage", inputValue)
         // alert("value from local storage" + localStorage.getItem("testStorage"))
-
-        $(".display").text(localStorage.getItem("testStorage"))
+        //using ` ` means the $ \/ is not JQuery, template literals, look it up!
+        let itemHtml = `<div class = "display-item">${localStorage.getItem("testStorage")}</div>`
+        $(".display").html(itemHtml);
+        // how can we delegate this event to the outer html node
+        $(".display-item").on("click", function(event){
+            console.log(event)
+        // alert("clicked on an item");
     });
+    });
+
 
     $(".user-input").on("keyup", function(){
         let inputValue = $(".user-input").val();
@@ -19,7 +26,7 @@ $(document).ready(function() {
     //Removing items from storage
     $(".del-text-btn").on("click", function(){
         localStorage.removeItem("testStorage")
-        alert('item deleted? check the console')
+        // alert('item deleted? check the console')
     });
 
 

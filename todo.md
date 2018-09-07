@@ -1,10 +1,10 @@
 - [ ] Store Items
- - [ ] create new item
+ - [x] create new item
  - [ ] edit/update item
- - [ ] delete item
+ - [x] delete item
 
 - [ ] Front End
- - [ ] display item
+ - [x] display item
  - [x] enter new item
  - [ ] select item for edit
  - [ ] select item for delete 
@@ -23,3 +23,8 @@
  - [x] jquery
  - [ ] moment.js
  - [ ] c3.js (charts.js)
+
+
+ ## Next steps
+
+ - [ ] tests
