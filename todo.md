@@ -27,4 +27,5 @@
 
  ## Next steps
 
+ - [ ] factor out common functionality
  - [ ] tests
