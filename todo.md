@@ -31,37 +31,8 @@
  - [ ] tests
 
 ## OFFICIAL FEATURE LIST
-Please note I have two app ideas that I cannot decide between, so I have listed them both!
-
-##App goal:   
-I'd like to make a trivia app, one that gives you multiple choice answers
-and maybe mocks you a little like how You Don't Know Jack would. I wonder
-if I could incorporate multiplayer somehow? Probably not at this stage, 
-but I could definitely have a leaderboard that displays! I'm thinking
-the longer you take to answer the less points you get too.
-
-[P] - [D] Priority/Difficulty
-
-- [1] - [3] Opening site animation
-- [9] - [2] Start Quiz/See Leaderboard option to start
-- [9] - [4] Display Questions
-- [5] - [9] Timer (10 seconds) to lock in answer
-- [3] - [2] Click to lock in answer
-- [1] - [9] Fade out wrong answers as timer goes down
-- [7] - [6] Display points earned for right answer
-- [5] - [9] Display information on correct answer (history/background) Might be hard
-- [9] - [3] Display and store total score
-- [7] - [5] Allow entry of name to append to leaderboard at end (3 letters only)
-- [7] - [5] Display leaderboard
-- [9] - [3] Congratulations (dancing corgi?) for players who qualify for leaderboard
-- [1] - [3] Sound for correct answer or wrong answer
-- [3] - [5] Add page for contributing questions for trivia
-
-I put some of these things as 9's if I didn't know how to do them, but most likely 
-they'll end up being a lot simpler than I think.
-
-
-## Also I had another idea for an app, I'll go ahead and list it and maybe one of you can suggest which one you think is the better idea:
+Please note I added a second app idea in the event that this first one isn't suitable
+for the requirements of this project.
 
 
 ##App Goal:   
@@ -90,6 +61,34 @@ Features:
 I'm not sure what other features to include. You know, this idea probably isn't exaclty
 on point, but I do think it's really cute. I'm also not sure if it's going to be really
 hard or if it's going to be really easy...
+
+
+
+##Backup App goal:   
+I'd like to make a trivia app, one that gives you multiple choice answers
+and maybe mocks you a little like how You Don't Know Jack would. I wonder
+if I could incorporate multiplayer somehow? Probably not at this stage, 
+but I could definitely have a leaderboard that displays! I'm thinking
+the longer you take to answer the less points you get too.
+
+[P] - [D] Priority/Difficulty
+
+- [1] - [3] Opening site animation
+- [9] - [2] Start Quiz/See Leaderboard option to start
+- [9] - [4] Display Questions
+- [5] - [9] Timer (10 seconds) to lock in answer
+- [1] - [9] Fade out wrong answers as timer goes down
+- [7] - [6] Display points earned for right answer
+- [5] - [9] Display information on correct answer (history/background) Might be hard
+- [9] - [3] Display and store total score
+- [7] - [5] Allow entry of name to append to leaderboard at end (3 letters only)
+- [7] - [5] Display leaderboard
+- [9] - [3] Congratulations (dancing corgi?) for players who qualify for leaderboard
+- [1] - [3] Sound for correct answer or wrong answer
+- [3] - [5] Add page for contributing questions for trivia
+
+I put some of these things as 9's if I didn't know how to do them, but most likely 
+they'll end up being a lot simpler than I think.
 
 
 
