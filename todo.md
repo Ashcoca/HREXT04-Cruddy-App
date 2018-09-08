@@ -71,7 +71,7 @@ if I could incorporate multiplayer somehow? Probably not at this stage,
 but I could definitely have a leaderboard that displays! I'm thinking
 the longer you take to answer the less points you get too.
 
-[P] - [D] Priority/Difficulty
+- [P] - [D] Priority - Difficulty
 
 - [1] - [3] Opening site animation
 - [9] - [2] Start Quiz/See Leaderboard option to start
