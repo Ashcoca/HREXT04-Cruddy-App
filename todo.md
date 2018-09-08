@@ -61,8 +61,7 @@ I put some of these things as 9's if I didn't know how to do them, but most like
 they'll end up being a lot simpler than I think.
 
 
-## Also I had another idea for an app, I'll go ahead and list it and maybe one of you can
-## suggest which one you think is the better idea:
+## Also I had another idea for an app, I'll go ahead and list it and maybe one of you can suggest which one you think is the better idea:
 
 
 ##App Goal:   
