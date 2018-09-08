@@ -72,24 +72,24 @@ touch with everyone in the class to help contribute bits, like stories
 or something.
 
 Features:
-- [ ] - [ ] - Splash page detailing who we are and what we're about
-- [ ] - [ ] - Searchable database of all members 
-- [ ] - [ ] - Profile page or each user, I'll come up with questions and send them to everyone
-- [ ] - [ ] - Photo of user
-- [ ] - [ ] - Link to github
+- [ ] - [ ] - Intro detailing who we are and what we're about
+- [ ] - [ ] - Searchable database of all members (list.js)
+- [ ] - [ ] - Profile info for each user
+- [ ] - [ ] - Photo of user for profile 
+- [ ] - [ ] - Link to github for each user
 - [ ] - [ ] - Quote or funny story or something that I can get them to contribute
-- [ ] - [ ] - Mouse over user for something, like their favorite animal
+- [ ] - [ ] - Mouse over user for something silly, like their favorite animal
 - [ ] - [ ] - Pages for staff members
-- [ ] - [ ] - Ability to leave comments on user pages
-- [ ] - [ ] - Auto complete when searching
+- [ ] - [ ] - Ability to leave comments (something like the twittler comment part)
+- [ ] - [ ] - Auto complete when searching?
 - [ ] - [ ] - Maybe a way to see all members at once? Like a big grid with everyone's pics
 - [ ] - [ ] - Pagination for grid, maybe 10 profile pics at a time
-- [ ] - [ ] - Add chart showing how each person spent their time during the extended program (like the example we worked on I suppose)
+- [ ] - [ ] - Add chart showing how each person spent their time during the extended program (like the example we worked on I suppose) Maybe that could be an on-click feature somehow
 
 I'm not sure what other features to include. You know, this idea probably isn't exaclty
 on point, but I do think it's really cute. I'm also not sure if it's going to be really
-hard or if it's going to be really easy. I kinda think I might be biting off more than I
-can chew, but I don't have anything to do next week so I'm on board with it!
+hard or if it's going to be really easy...
+
 
 
  ## feature list ideas (not official)
