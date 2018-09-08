@@ -35,7 +35,7 @@ Please note I added a second app idea in the event that this first one isn't sui
 for the requirements of this project.
 
 
-##App Goal:   
+## App Goal:   
 HREXT04 Yearbook. I certainly had a great time with everyone, I thought it
 might be a neat idea to commemorate the end of our time together the same
 way we did back in grade school - with a yearbook. I figure I can get in 
@@ -64,7 +64,8 @@ hard or if it's going to be really easy...
 
 
 
-##Backup App goal:   
+## Backup App goal:
+
 I'd like to make a trivia app, one that gives you multiple choice answers
 and maybe mocks you a little like how You Don't Know Jack would. I wonder
 if I could incorporate multiplayer somehow? Probably not at this stage, 
