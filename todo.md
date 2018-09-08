@@ -79,8 +79,9 @@ Features:
 - [ ] - [ ] - Link to github for each user
 - [ ] - [ ] - Quote or funny story or something that I can get them to contribute
 - [ ] - [ ] - Mouse over user for something silly, like their favorite animal
+- [ ] - [ ] - Highlights from the year
 - [ ] - [ ] - Pages for staff members
-- [ ] - [ ] - Ability to leave comments (something like the twittler comment part)
+- [ ] - [ ] - Ability to leave comments (something like the twittler tweet bit)
 - [ ] - [ ] - Auto complete when searching?
 - [ ] - [ ] - Maybe a way to see all members at once? Like a big grid with everyone's pics
 - [ ] - [ ] - Pagination for grid, maybe 10 profile pics at a time
