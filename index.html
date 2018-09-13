@@ -8,17 +8,35 @@
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <!-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script> -->
     <script src="app.js"></script>
+    <script src="data.js"></script>
 
   </head>
   <body>
 
   <input type="text" class="user-input-title" placeholder="Enter the Title">
   <textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
+  <!-- <textarea class="tiny-cloud">Enter note here</textarea> -->
+
 
   <button class="add-text-btn">add text</button>
   <button class="del-text-btn">delete text</button>
-
+  <center>
+  <ul id="sortable">
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+  </ul>
+</center> 
   <div class="display"></div>
   </body>
 </html>
