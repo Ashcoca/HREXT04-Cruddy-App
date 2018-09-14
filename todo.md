@@ -58,6 +58,7 @@ App idea - Creating a fantasy football rankings append
 - [x] - Sometimes when adding player and then not moving from 1 spot that player
         will auto move down a few ranks. Figure out why and fix.
 - [ ] - Figure way to correct for players with same names for FantasyPros links
+- [ ] - Fix issue with ordered list being messed up (create separate storage per position)
 
 
 

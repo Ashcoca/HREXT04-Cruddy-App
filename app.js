@@ -63,17 +63,6 @@ $(document).ready(function() {
       $('input').val('Player Name')
     });
 
-// //future feature -- adding links to fantasypros
-
-$( "li" ).hover(
-  function() {
-    var players = $(this).text().substr(1).slice(0, -1).replace(' ', '-').toLowerCase();
-    $( this ).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php title="See player profile on FantasyPros">[----------]</a>' ) );
-  }, function() {
-    $( this ).find( "a:last" ).remove();
-  });
-
-
   //List settings - needs to be refactored
   //To store list and changes in local storage
   var sortableList = Sortable.create(sortableqb, {
@@ -93,7 +82,7 @@ $( "li" ).hover(
 		filter: '.js-remove',
 		onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(11).slice(0, -1));
       }
 			evt.item.parentNode.removeChild(evt.item);
 		}
@@ -116,7 +105,7 @@ $( "li" ).hover(
     filter: '.js-remove',
     onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(11).slice(0, -1));
       }
       evt.item.parentNode.removeChild(evt.item);
     }
@@ -139,10 +128,17 @@ $( "li" ).hover(
     filter: '.js-remove',
     onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(11).slice(0, -1));
       }
       evt.item.parentNode.removeChild(evt.item);
     }
   });
 
+  $( "li" ).hover(
+    function() {
+      var players = $(this).text().substr(1).slice(0, -1).replace(' ', '-').toLowerCase();
+      $(this).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php title="See player profile on FantasyPros">0000000000</a>' ) );
+    }, function() {
+    $( this ).find( "a:last" ).remove();
+  });
 });
