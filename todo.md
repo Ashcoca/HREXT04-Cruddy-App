@@ -35,6 +35,7 @@
 
 App idea - Creating a fantasy football rankings append
 
+- Feature List
 - [x] - Add players to be ranked
 - [x] - Drag and Drop players to adjust rankings
 - [x] - Remove players from rankings
@@ -51,6 +52,11 @@ App idea - Creating a fantasy football rankings append
 - [ ] - Add button to save list to memory
 - [ ] - Add button to create new list && button to load saved list
 - [ ] - Click on player to show chart with points scored over previous weeks
+
+- Bugs
+- [ ] - Fix font issues (replace font entirely?)
+- [ ] - Sometimes when adding player and then not moving from 1 spot that player
+        will auto move down a few ranks. Figure out why and fix.
 
 
 

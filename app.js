@@ -19,9 +19,10 @@ $(document).ready(function() {
   $('#sortablewr').hide().delay(1000).fadeIn(1000);
 
   //loop to generate each sortable list
-  for (var i = 0; i < localStorage.length -1; i++){
+  for (var i = 0; i < localStorage.length; i++){
     var key = localStorage.key(i);
     var position = localStorage.getItem(key);
+    if (key === localStorage) { continue }
     if (position == "QB") {
       $('#sortableqb').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
     }
@@ -54,12 +55,28 @@ $(document).ready(function() {
       localStorage.setItem(inputKey, "WR");
       $('#sortablewr').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
     });
-    //to clear boxes after being clicked
+    //to clear boxes after being clicked in or button clicked
+    $('input').on("click", function(){
+      $(this).val('');
+    });
     $('button').on("click", function(){
       $('input').val('Player Name')
     });
 
-// List settings
+// //future feature -- adding links to fantasypros
+
+$( "li" ).hover(
+  function() {
+    var players = $(this).text().substr(1).slice(0, -1).replace(' ', '-').toLowerCase();
+console.log(players)
+
+    $( this ).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php>See FantasyPros profile</a>' ) );
+  }, function() {
+    $( this ).find( "a:last" ).remove();
+  });
+
+
+  //List settings - needs to be refactored
   //To store list and changes in local storage
   var sortableList = Sortable.create(sortableqb, {
   sort: true,
@@ -129,6 +146,5 @@ $(document).ready(function() {
       evt.item.parentNode.removeChild(evt.item);
     }
   });
-
 
 });
