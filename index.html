@@ -11,24 +11,21 @@
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <script src="node_modules/sortablejs/Sortable.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
-    <!-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script> -->
+
     <script src="app.js"></script>
     <script src="data.js"></script>
 
   </head>
   <body>
 
-  <input type="text" class="user-input-title" placeholder="Enter the Title">
-  <textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
-  <!-- <textarea class="tiny-cloud">Enter note here</textarea> -->
+  <input type="text" class="user-input-title" placeholder="Add Player">
 
 
-  <button class="add-text-btn">add text</button>
-  <button class="del-text-btn">delete text</button>
+  <button class="add-player">Add and Refresh</button>
+
   <center>
   <ul id="sortable">
-  <li class ="sortable-item">Item 1<i class="js-remove">✖</i></li>
+  <li class ="sortable-item">D'Brickashaw Ferguson<i class="js-remove">✖</i></li>
   <li class ="sortable-item">Item 2<i class="js-remove">✖</i></li>
   <li class ="sortable-item">Item 3<i class="js-remove">✖</i></li>
   <li class ="sortable-item">Item 4<i class="js-remove">✖</i></li>
@@ -36,13 +33,7 @@
   <li class ="sortable-item">Item 6<i class="js-remove">✖</i></li>
   <li class ="sortable-item">Item 7<i class="js-remove">✖</i></li>
   </ul>
-  <!-- <div id="simpleList" class="list-group">
-  <div class="list-group-item">This is <a href="http://rubaxa.github.io/Sortable/">Sortable</a></div>
-  <div class="list-group-item">It works with Bootstrap...</div>
-  <div class="list-group-item">...out of the box.</div>
-  <div class="list-group-item">It has support for touch devices.</div>
-  <div class="list-group-item">Just drag some elements around.</div>
-</div> -->
+
 </center>
   <div class="display"></div>
   </body>

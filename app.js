@@ -1,39 +1,32 @@
 $(document).ready(function() {
 
 
-    $(".add-text-btn").on("click", function(){
+    $(".add-player").on("click", function(){
 
       // store values
       let inputKey = $(".user-input-title").val();
-      let inputValue = $(".user-input-body").val();
+
+      //store in local storage
+      localStorage.setItem(inputKey, inputKey);
 
       // clear values
       $(".user-input-title").val("");
-      $(".user-input-body").val("");
 
-      console.log(inputKey, inputValue);
+      //loop through local storage and add new ul item
+      for (var i = 0; i < localStorage.length; i++){
+        var key = localStorage.key(i)
+        $('#sortable').append('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + key + '<i class="js-remove">✖</i></ul>');
+      }
 
-      localStorage.setItem(inputKey, inputValue);
       // data-
-      let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
-      $(".display").html(itemHtml);
+      // let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
+      // $(".display").html(itemHtml);
       //console.log(localStorage);
       // how can we delegate this event to the outer html node?
       // https://learn.jquery.com/events/event-delegation/
 
-      $(".display-item").on("click", function(e){
-        // plop the key:value back into the input boxes
-
-        // get the values from the the divs?
-        console.log("key=> ", e.target.dataset.storageKey); // user-input-title
-        localStorage.getItem(e.target.dataset.storageKey); // user-input-body
-
-        // set those values in the form fields
-        $(".user-input-title").val(e.target.dataset.storageKey);
-        $(".user-input-body").val(localStorage.getItem(e.target.dataset.storageKey));
       });
 
-    });
 
 
 
@@ -54,18 +47,8 @@ $(document).ready(function() {
        // refresh from storage?
      });
 
-
-     // iterative approach to adding items
-     // store data as stringified array of objects
-     // store data with individual keys
     // how do we get keys? research Object.keys
 
-
-// //create sortable drag and drop list
-//     $( function() {
-//       $( "#sortable" ).sortable();
-//       $( "#sortable" ).disableSelection();
-//     })
 // Simple list
   var sortableList = Sortable.create(sortable, {
   sort: true,
@@ -76,4 +59,4 @@ $(document).ready(function() {
 		}
   });
 
-  });
+});
