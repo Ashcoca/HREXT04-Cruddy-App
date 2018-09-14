@@ -1,8 +1,30 @@
 $(document).ready(function() {
-  for (var i = 0; i < localStorage.length -1; i++){
-    var key = localStorage.key(i)
-    $('#sortable').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
-  }
+  var animationEnd = (function(el) {
+    var animations = {
+      animation: 'animationend',
+      OAnimation: 'oAnimationEnd',
+      MozAnimation: 'mozAnimationEnd',
+      WebkitAnimation: 'webkitAnimationEnd',
+    };
+
+    for (var t in animations) {
+      if (el.style[t] !== undefined) {
+        return animations[t];
+      }
+    }
+  })(document.createElement('div'));
+
+  $('h1').addClass('animated fadeInDown');
+  $('h1').one(animationEnd, function(){
+    for (var i = 0; i < localStorage.length -1; i++){
+      var key = localStorage.key(i)
+      var animated = $('#sortable').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
+    }
+    return animated.addClass('animated fadeIn');
+  });
+
+
+
 
     $(".add-player").on("click", function(){
 

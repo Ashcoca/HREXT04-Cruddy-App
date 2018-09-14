@@ -3,6 +3,7 @@
     src: url('assets/NFL.ttf');
 
 }
+
 /* List styling */
 #sortable {
    list-style-type: none;
@@ -16,8 +17,9 @@
    margin: 0 3px 3px 3px;
    padding: 0.4em;
    padding-left: 1.5em;
+   padding-bottom: 0.6em;
    font-size: 1.7em;
-   height: 18px;
+   height: 20px;
    font-family: 'NFL';
    background-color: lightgrey;
    border-left: 6px solid red;
@@ -59,7 +61,7 @@
 /* Button styling */
 
 .add-player {
-  background-color: blue;
+
 }
 
 
