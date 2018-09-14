@@ -29,23 +29,23 @@
 //   }
 //   return players;
 // }
-
-
-var items = [
-        'Blue',
-        'Red',
-        'White',
-        'Green',
-        'Black',
-        'Orange'
-    ];
-var ul = $('#sortable');
-
-$('#sortable').appendChild(ul);
-
-items.forEach(function (item) {
-    var li = document.createElement('li');
-    ul.appendChild(li);
-
-    li.innerHTML += item;
-});
+//
+//
+// var items = [
+//         'Blue',
+//         'Red',
+//         'White',
+//         'Green',
+//         'Black',
+//         'Orange'
+//     ];
+// var ul = $('#sortable');
+//
+// $('#sortable').appendChild(ul);
+//
+// items.forEach(function (item) {
+//     var li = document.createElement('li');
+//     ul.appendChild(li);
+//
+//     li.innerHTML += item;
+// });

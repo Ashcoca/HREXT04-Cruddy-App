@@ -60,28 +60,20 @@ $(document).ready(function() {
      // store data with individual keys
     // how do we get keys? research Object.keys
 
-    var items = [
-            'Blue',
-            'Red',
-            'White',
-            'Green',
-            'Black',
-            'Orange'
-        ];
 
-
-    items.forEach(function (item) {
-        var li = document.createElement('li');
-        $('#sortable').appendChild(li);
-
-        li.innerHTML += item;
-    });
-
-//create sortable drag and drop list
-    $( function() {
-      $( "#sortable" ).sortable();
-      $( "#sortable" ).disableSelection();
-    })
-
+// //create sortable drag and drop list
+//     $( function() {
+//       $( "#sortable" ).sortable();
+//       $( "#sortable" ).disableSelection();
+//     })
+// Simple list
+  var sortableList = Sortable.create(sortable, {
+  sort: true,
+  animation: 150,
+		filter: '.js-remove',
+		onFilter: function (evt) {
+			evt.item.parentNode.removeChild(evt.item);
+		}
+  });
 
   });

@@ -17,11 +17,27 @@ body {
    height: 18px;
    border-left: 6px solid red;
    background-color: lightgrey;
-   opacity: 1;
    width: 350px;
-  }
+   cursor: pointer;
+	 position: relative;
+	}
 
- #sortable li span {
+
+
+
+ #sortable i {
+   -webkit-transition: opacity .2s;
+   transition: opacity .2s;
+   opacity: 0;
+   display: block;
+   cursor: pointer;
+   color: #c00;
+   top: 3px;
+   right: 10px;
    position: absolute;
-   margin-left: -1.3em;
+   font-style: normal;
+ }
+
+ #sortable li:hover i {
+   opacity: 1;
  }
