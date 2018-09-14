@@ -5,14 +5,14 @@
 }
 
 /* List styling */
-#sortable {
+ol {
    list-style-type: none;
    margin: 0;
    padding: 0;
    width: 60%;
  }
 
- #sortable li {
+ ol li {
    counter-increment: list;
    margin: 0 3px 3px 3px;
    padding: 0.4em;
@@ -26,9 +26,10 @@
    width: 300px;
    cursor: pointer;
 	 position: relative;
-	}
 
- #sortable li:before {
+ }
+
+ ol li:before {
   color: #e75204;
   content: counter(list) ".";
   left: -32px;
@@ -39,7 +40,7 @@
   width: 26px;
  }
 
- #sortable i {
+ ol i {
    -webkit-transition: opacity .2s;
    transition: opacity .2s;
    opacity: 0;
@@ -52,22 +53,90 @@
    font-style: normal;
  }
 
- #sortable li:hover i {
+ ol li:hover i {
    opacity: 1;
  }
 
 
+#qb {
+  max-height: 200px;
+  width: auto;
+}
 
-/* Button styling */
+#wr {
+  max-height: 200px;
+  width: auto;
+}
 
-.add-player {
-
+#rb {
+  max-height: 200px;
+  width: auto;
 }
 
 
+h2 {
+  font-family: "roboto";
+}
 
 
+.column {
+    float: left;
+    width: 33.33%;
+}
 
-.user-input-title {
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+    }
+}
+
+button {
+  /* display: inline; */
+  background-color: #CCCCCC;
+  border: 0.15em solid #CCCCCC;
+  box-sizing: border-box;
+  font-family:'Segoe UI','Roboto',sans-serif;
+  font-weight:400;
+  color:#000000;
+  text-align: center;
+  position:relative;
+  padding: 5px;
 
 }
+button:hover {
+  border-color:#7a7a7a;
+
+}
+
+/* {
+ display:inline-block;
+ padding:0.2em 1.45em;
+ margin:0.1em;
+ border:0.15em solid #CCCCCC;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Segoe UI','Roboto',sans-serif;
+ font-weight:400;
+ color:#000000;
+ background-color:#CCCCCC;
+ text-align:center;
+ position:relative;
+} */
+/* button:hover{
+ border-color:#7a7a7a;
+}
+button:active{
+ background-color:#999999;
+} */
+/* @media all and (max-width:30em){
+ button{
+  display:block;
+  margin:0.2em auto;
+ }
+} */

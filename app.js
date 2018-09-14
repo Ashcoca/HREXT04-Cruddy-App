@@ -1,46 +1,48 @@
 $(document).ready(function() {
-  var animationEnd = (function(el) {
-    var animations = {
-      animation: 'animationend',
-      OAnimation: 'oAnimationEnd',
-      MozAnimation: 'mozAnimationEnd',
-      WebkitAnimation: 'webkitAnimationEnd',
-    };
 
-    for (var t in animations) {
-      if (el.style[t] !== undefined) {
-        return animations[t];
-      }
-    }
-  })(document.createElement('div'));
-
+  //opening animations
   $('h1').addClass('animated fadeInDown');
-  $('h1').one(animationEnd, function(){
-    for (var i = 0; i < localStorage.length -1; i++){
-      var key = localStorage.key(i)
-      var animated = $('#sortable').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
+  $('ol').hide().delay(700).fadeIn(500);
+
+  for (var i = 0; i < localStorage.length -1; i++){
+    var key = localStorage.key(i);
+    var position = localStorage.getItem(key);
+    if (position == "QB") {
+      $('#sortableqb').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
     }
-    return animated.addClass('animated fadeIn');
-  });
+    if (position == "RB") {
+      $('#sortablerb').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
+    }
+    if (position == "WR") {
+      $('#sortablewr').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
+    }
+  }
 
-
-
-
-    $(".add-player").on("click", function(){
-
+    //button commands
+    $(".add-qb").on("click", function(){
       // store values
-      let inputKey = $(".user-input-title").val();
-
+      let inputKey = $(".qb-input-title").val();
       //store in local storage
-      localStorage.setItem(inputKey, inputKey);
-
-      $('#sortable').append('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
-
+      localStorage.setItem(inputKey, "QB");
+      //adds new item to start of list
+      $('#sortableqb').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
     })
 
+    $(".add-rb").on("click", function(){
+      let inputKey = $(".rb-input-title").val();
+      localStorage.setItem(inputKey, "RB");
+      $('#sortablerb').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
+    })
+
+    $(".add-wr").on("click", function(){
+      let inputKey = $(".wr-input-title").val();
+      localStorage.setItem(inputKey, "WR");
+      $('#sortablewr').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
+    })
 
 // List settings
-  var sortableList = Sortable.create(sortable, {
+  //To store list and changes in local storage
+  var sortableList = Sortable.create(sortableqb, {
   sort: true,
   group: "localStorage",
 	store: {
@@ -57,13 +59,57 @@ $(document).ready(function() {
 		filter: '.js-remove',
 		onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        // if (key == evt.item.textContent.slice(0, -1)) {
-          localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
       }
 			evt.item.parentNode.removeChild(evt.item);
-
 		}
-
   });
+
+  var sortableList = Sortable.create(sortablerb, {
+  sort: true,
+  group: "localStorage",
+  store: {
+    get: function (sortable) {
+      var order = localStorage.getItem(sortable.options.group.name);
+      return order ? order.split('|') : [];
+    },
+    set: function (sortable) {
+      var order = sortable.toArray();
+      localStorage.setItem(sortable.options.group.name, order.join('|'));
+    }
+  },
+  animation: 150,
+    filter: '.js-remove',
+    onFilter: function (evt) {
+      for (var i = 0; i < localStorage.length -1; i++){
+        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+      }
+      evt.item.parentNode.removeChild(evt.item);
+    }
+  });
+
+  var sortableList = Sortable.create(sortablewr, {
+  sort: true,
+  group: "localStorage",
+  store: {
+    get: function (sortable) {
+      var order = localStorage.getItem(sortable.options.group.name);
+      return order ? order.split('|') : [];
+    },
+    set: function (sortable) {
+      var order = sortable.toArray();
+      localStorage.setItem(sortable.options.group.name, order.join('|'));
+    }
+  },
+  animation: 150,
+    filter: '.js-remove',
+    onFilter: function (evt) {
+      for (var i = 0; i < localStorage.length -1; i++){
+        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+      }
+      evt.item.parentNode.removeChild(evt.item);
+    }
+  });
+
 
 });

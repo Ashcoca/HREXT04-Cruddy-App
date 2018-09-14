@@ -14,20 +14,40 @@
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
 
     <script src="app.js"></script>
-    <script src="data.js"></script>
 
   </head>
   <body>
-  <center>
+    <center>
     <h1><img src="assets/logo.png"></h1>
-    <input type="text" class="user-input-title" placeholder="Player Name">
-    <button class="add-player">Add Player</button>
-    <p>
-  <ol id="sortable">
+    </center>
+    <div class = "row">
+      <div class = "column">
+        <center>
+        <h2><img id="qb" src="assets/qb2.png"></h2>
+        <input type="text" class="qb-input-title" placeholder="Player Name">
+        <button class="add-qb">Add Quarterback</button>
+        <p>
+        <ol id="sortableqb"></ol>
+        </center>
+      </div>
+      <div class="column">
+       <center>
+       <h2><img id="rb" src="assets/rb.png"></h2>
+       <input type="text" class="rb-input-title" placeholder="Player Name">
+       <button class="add-rb">Add Running Back</button>
+       <p>
+       <ol id="sortablerb"></ol>
+       </center>
+       </div>
+      <div class="column">
+        <center>
+        <h2><img id="wr" src="assets/wr.jpg"></h2>
+        <input type="text" class="wr-input-title" placeholder="Player Name">
+        <button class="add-wr">Add Wide Receiver</button>
+        <p>
+        <ol id="sortablewr"></ol>
+        </center>
+      </div>
 
-  </ol>
-
-</center>
-  <div class="display"></div>
   </body>
 </html>
