@@ -60,6 +60,23 @@ $(document).ready(function() {
      // store data with individual keys
     // how do we get keys? research Object.keys
 
+    var items = [
+            'Blue',
+            'Red',
+            'White',
+            'Green',
+            'Black',
+            'Orange'
+        ];
+
+
+    items.forEach(function (item) {
+        var li = document.createElement('li');
+        $('#sortable').appendChild(li);
+
+        li.innerHTML += item;
+    });
+
 //create sortable drag and drop list
     $( function() {
       $( "#sortable" ).sortable();

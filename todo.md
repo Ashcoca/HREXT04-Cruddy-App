@@ -7,7 +7,7 @@
  - [x] display item
  - [x] enter new item
  - [ ] select item for edit
- - [ ] select item for delete 
+ - [ ] select item for delete
  - [x] a form!
 
 - [ ] UI/UX
@@ -30,6 +30,35 @@
  - [ ] factor out common functionality
  - [ ] tests
 
+
+## Actual Feature List (Final)
+
+App idea - Creating a fantasy football rankings append
+
+- [ ] - Add players to be ranked
+- [ ] - Drag and Drop players to adjust rankings
+- [ ] - Remove players from rankings
+- [ ] - CSS make it pretty
+- [ ] - Transitions, animations
+- [ ] - Color code by position
+- [ ] - Add up arrow or down arrow if player has moved up or down
+- [ ] - Click on player to show chart with points scored over previous weeks?
+- [ ] -
+- [ ] -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## OFFICIAL FEATURE LIST
 Please note I added a second app idea in the event that this first one isn't suitable
 for the requirements of this project.
@@ -38,7 +67,7 @@ for the requirements of this project.
 ## App Goal:   
 HREXT04 Yearbook. I certainly had a great time with everyone, I thought it
 might be a neat idea to commemorate the end of our time together the same
-way we did back in grade school - with a yearbook. I figure I can get in 
+way we did back in grade school - with a yearbook. I figure I can get in
 touch with everyone in the class to help contribute bits, like stories
 or something.
 
@@ -46,7 +75,7 @@ Features:
 - [ ] - [ ] - Intro detailing who we are and what we're about
 - [ ] - [ ] - Searchable database of all members (list.js)
 - [ ] - [ ] - Profile info for each user
-- [ ] - [ ] - Photo of user for profile 
+- [ ] - [ ] - Photo of user for profile
 - [ ] - [ ] - Link to github for each user
 - [ ] - [ ] - Quote or funny story or something that I can get them to contribute
 - [ ] - [ ] - Mouse over user for something silly, like their favorite animal
@@ -68,7 +97,7 @@ hard or if it's going to be really easy...
 
 I'd like to make a trivia app, one that gives you multiple choice answers
 and maybe mocks you a little like how You Don't Know Jack would. I wonder
-if I could incorporate multiplayer somehow? Probably not at this stage, 
+if I could incorporate multiplayer somehow? Probably not at this stage,
 but I could definitely have a leaderboard that displays! I'm thinking
 the longer you take to answer the less points you get too.
 
@@ -88,7 +117,7 @@ the longer you take to answer the less points you get too.
 - [1] - [3] Sound for correct answer or wrong answer
 - [3] - [5] Add page for contributing questions for trivia
 
-I put some of these things as 9's if I didn't know how to do them, but most likely 
+I put some of these things as 9's if I didn't know how to do them, but most likely
 they'll end up being a lot simpler than I think.
 
 
