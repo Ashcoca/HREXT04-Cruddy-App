@@ -2,8 +2,23 @@ $(document).ready(function() {
 
   //opening animations
   $('h1').addClass('animated fadeInDown');
-  $('ol').hide().delay(700).fadeIn(500);
+  // $('ol').hide().delay(700).fadeIn(500);
+  $('#qb').hide().delay(600).fadeIn(500);
+  $('.qb-input-title').hide().delay(600).fadeIn(500);
+  $('.add-qb').hide().delay(600).fadeIn(500);
+  $('#sortableqb').hide().delay(600).fadeIn(500);
 
+  $('#rb').hide().delay(750).fadeIn(750);
+  $('.rb-input-title').hide().delay(600).fadeIn(5750);
+  $('.add-rb').hide().delay(750).fadeIn(750);
+  $('#sortablerb').hide().delay(750).fadeIn(750);
+
+  $('#wr').hide().delay(1000).fadeIn(1000);
+  $('.wr-input-title').hide().delay(600).fadeIn(1000);
+  $('.add-wr').hide().delay(1000).fadeIn(1000);
+  $('#sortablewr').hide().delay(1000).fadeIn(1000);
+
+  //loop to generate each sortable list
   for (var i = 0; i < localStorage.length -1; i++){
     var key = localStorage.key(i);
     var position = localStorage.getItem(key);
