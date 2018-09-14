@@ -35,17 +35,22 @@
 
 App idea - Creating a fantasy football rankings append
 
-- [ ] - Add players to be ranked
-- [ ] - Drag and Drop players to adjust rankings
-- [ ] - Remove players from rankings
-- [ ] - CSS make it pretty
-- [ ] - Transitions, animations
-- [ ] - Color code by position
-- [ ] - Add up arrow or down arrow if player has moved up or down
-- [ ] - Click on player to show chart with points scored over previous weeks?
-- [ ] -
-- [ ] -
-
+- [x] - Add players to be ranked
+- [x] - Drag and Drop players to adjust rankings
+- [x] - Remove players from rankings
+- [x] - CSS make it pretty
+- [x] - Transitions
+- [x] - Add animations
+- [x] - Create individual lists by position
+- [x] - Store players in local memory
+- [x] - Save re-ordered list
+- [x] - Create title image
+- [x] - Compress lists if window size is small
+- [x] - Add individual add player buttons per position
+- [ ] - Dynamically add player team info to each boxes
+- [ ] - Add button to save list to memory
+- [ ] - Add button to create new list && button to load saved list
+- [ ] - Click on player to show chart with points scored over previous weeks
 
 
 

@@ -9,12 +9,12 @@ $(document).ready(function() {
   $('#sortableqb').hide().delay(600).fadeIn(500);
 
   $('#rb').hide().delay(750).fadeIn(750);
-  $('.rb-input-title').hide().delay(600).fadeIn(5750);
+  $('.rb-input-title').hide().delay(750).fadeIn(750);
   $('.add-rb').hide().delay(750).fadeIn(750);
   $('#sortablerb').hide().delay(750).fadeIn(750);
 
   $('#wr').hide().delay(1000).fadeIn(1000);
-  $('.wr-input-title').hide().delay(600).fadeIn(1000);
+  $('.wr-input-title').hide().delay(1000).fadeIn(1000);
   $('.add-wr').hide().delay(1000).fadeIn(1000);
   $('#sortablewr').hide().delay(1000).fadeIn(1000);
 
@@ -41,19 +41,23 @@ $(document).ready(function() {
       localStorage.setItem(inputKey, "QB");
       //adds new item to start of list
       $('#sortableqb').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
-    })
+    });
 
     $(".add-rb").on("click", function(){
       let inputKey = $(".rb-input-title").val();
       localStorage.setItem(inputKey, "RB");
       $('#sortablerb').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
-    })
+    });
 
     $(".add-wr").on("click", function(){
       let inputKey = $(".wr-input-title").val();
       localStorage.setItem(inputKey, "WR");
       $('#sortablewr').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
-    })
+    });
+    //to clear boxes after being clicked
+    $('button').on("click", function(){
+      $('input').val('Player Name')
+    });
 
 // List settings
   //To store list and changes in local storage
