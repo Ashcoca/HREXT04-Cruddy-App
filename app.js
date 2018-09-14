@@ -34,8 +34,12 @@ $(document).ready(function() {
   animation: 150,
 		filter: '.js-remove',
 		onFilter: function (evt) {
+      for (var i = 0; i < localStorage.length -1; i++){
+        // if (key == evt.item.textContent.slice(0, -1)) {
+          localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
+      }
 			evt.item.parentNode.removeChild(evt.item);
-      localStorage.removeItem(this.key);
+
 		}
 
   });

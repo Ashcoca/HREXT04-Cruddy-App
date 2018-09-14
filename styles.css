@@ -1,7 +1,9 @@
-body {
+@font-face {
+    font-family: 'NFL';
+    src: url('assets/NFL.ttf');
 
 }
-
+/* List styling */
 #sortable {
    list-style-type: none;
    margin: 0;
@@ -10,20 +12,30 @@ body {
  }
 
  #sortable li {
+   counter-increment: list;
    margin: 0 3px 3px 3px;
    padding: 0.4em;
    padding-left: 1.5em;
-   font-size: 1.4em;
+   font-size: 1.7em;
    height: 18px;
-   border-left: 6px solid red;
+   font-family: 'NFL';
    background-color: lightgrey;
-   width: 350px;
+   border-left: 6px solid red;
+   width: 300px;
    cursor: pointer;
 	 position: relative;
 	}
 
-
-
+ #sortable li:before {
+  color: #e75204;
+  content: counter(list) ".";
+  left: -32px;
+  position: absolute;
+  margin: 0 3px 3px 3px;
+  padding-left: 1.2em;
+  text-align: right;
+  width: 26px;
+ }
 
  #sortable i {
    -webkit-transition: opacity .2s;
@@ -41,3 +53,19 @@ body {
  #sortable li:hover i {
    opacity: 1;
  }
+
+
+
+/* Button styling */
+
+.add-player {
+  background-color: blue;
+}
+
+
+
+
+
+.user-input-title {
+
+}
