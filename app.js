@@ -1,5 +1,8 @@
 $(document).ready(function() {
-
+  for (var i = 0; i < localStorage.length -1; i++){
+    var key = localStorage.key(i)
+    $('#sortable').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
+  }
 
     $(".add-player").on("click", function(){
 
@@ -9,54 +12,32 @@ $(document).ready(function() {
       //store in local storage
       localStorage.setItem(inputKey, inputKey);
 
-      // clear values
-      $(".user-input-title").val("");
+      $('#sortable').append('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');
 
-      //loop through local storage and add new ul item
-      for (var i = 0; i < localStorage.length; i++){
-        var key = localStorage.key(i)
-        $('#sortable').append('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + key + '<i class="js-remove">✖</i></ul>');
-      }
-
-      // data-
-      // let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
-      // $(".display").html(itemHtml);
-      //console.log(localStorage);
-      // how can we delegate this event to the outer html node?
-      // https://learn.jquery.com/events/event-delegation/
-
-      });
+    })
 
 
-
-
-     // TODO add back in later
-     // $(".user-input").on("keyup", function(){
-     //   let inputValue = $(".user-input").val();
-     //   localStorage.setItem("testStorage", inputValue);
-     //   $(".display").text(localStorage.getItem("testStorage"));
-     // });
-
-     $(".del-text-btn").on("click", function() {
-       alert('item deleted? check the console'); // maybe change to a window.confirm
-       localStorage.removeItem( $('.user-input-title').val() ); // grab the title and plop here
-       $(".user-input-title").val("");
-       $(".user-input-body").val("");
-       // clearing display? what if I have multiple items?
-       // after item is removed from local storage, redisplay items from local storage
-       // refresh from storage?
-     });
-
-    // how do we get keys? research Object.keys
-
-// Simple list
+// List settings
   var sortableList = Sortable.create(sortable, {
   sort: true,
+  group: "localStorage",
+	store: {
+		get: function (sortable) {
+			var order = localStorage.getItem(sortable.options.group.name);
+			return order ? order.split('|') : [];
+		},
+		set: function (sortable) {
+			var order = sortable.toArray();
+			localStorage.setItem(sortable.options.group.name, order.join('|'));
+		}
+	},
   animation: 150,
 		filter: '.js-remove',
 		onFilter: function (evt) {
 			evt.item.parentNode.removeChild(evt.item);
+      localStorage.removeItem(this.key);
 		}
+
   });
 
 });
