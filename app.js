@@ -70,7 +70,7 @@ $( "li" ).hover(
     var players = $(this).text().substr(1).slice(0, -1).replace(' ', '-').toLowerCase();
 console.log(players)
 
-    $( this ).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php>See FantasyPros profile</a>' ) );
+    $( this ).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php>o</a>' ) );
   }, function() {
     $( this ).find( "a:last" ).remove();
   });
