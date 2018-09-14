@@ -55,8 +55,9 @@ App idea - Creating a fantasy football rankings append
 
 - Bugs
 - [ ] - Fix font issues (replace font entirely?)
-- [ ] - Sometimes when adding player and then not moving from 1 spot that player
+- [x] - Sometimes when adding player and then not moving from 1 spot that player
         will auto move down a few ranks. Figure out why and fix.
+- [ ] - Figure way to correct for players with same names for FantasyPros links
 
 
 

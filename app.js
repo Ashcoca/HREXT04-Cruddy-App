@@ -68,9 +68,7 @@ $(document).ready(function() {
 $( "li" ).hover(
   function() {
     var players = $(this).text().substr(1).slice(0, -1).replace(' ', '-').toLowerCase();
-console.log(players)
-
-    $( this ).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php>o</a>' ) );
+    $( this ).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php title="See player profile on FantasyPros">[----------]</a>' ) );
   }, function() {
     $( this ).find( "a:last" ).remove();
   });
