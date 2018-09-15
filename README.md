@@ -9,5 +9,5 @@ Features include:
 - [x] - Create individual lists by position
 - [x] - Store players in local memory
 - [x] - Lists are automatically saved locally
-- [x] - Mobile friendly interface
+- [x] - Mobile and touch friendly interface
 - [x] - Direct links to FantasyPros for any listed player

@@ -36,9 +36,9 @@ $(document).ready(function() {
 
     //button commands
     $(".add-qb").on("click", function(){
-      // store values
+      // store values in var
       let inputKey = $(".qb-input-title").val();
-      //store in local storage
+      //store in local storage with position
       localStorage.setItem(inputKey, "QB");
       //adds new item to start of list
       $('#sortableqb').prepend('<li class="sortable-item" data-storage-key="'+inputKey+'"> ' + inputKey + '<i class="js-remove">✖</i></ul>');

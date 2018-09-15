@@ -61,6 +61,7 @@ App idea - Creating a fantasy football rankings append
 - [x] - Fix issue with ordered list being messed up (create separate storage per position)
 - [x] - Fix issue with list and invisible link creating havoc with sorting
 - [x] - Fix issue with invisible link appending value into sorted list - substring(11)
+- [ ] - Fix resize issue, lists overlap each other vertically
 
 
 
