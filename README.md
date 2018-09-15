@@ -3,7 +3,6 @@
 Features include:
 
 - [x] - Ability to add and remove players from rankings
-- [x] - Add custom players to you list
 - [x] - Drag and Drop players to adjust rankings
 - [x] - List remembers original player ranking while making adjustments
 - [x] - Dynamic CSS and animations to make the app pleasing and easy to use
