@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'NFL';
     src: url('assets/NFL.ttf');
-
 }
 
 /* List styling */
@@ -59,7 +58,7 @@ ol {
 
  }
 
-
+/* Images of players */
 #qb {
   max-height: 200px;
   width: auto;
@@ -76,11 +75,7 @@ ol {
 }
 
 
-h2 {
-  font-family: "roboto";
-}
-
-
+/* Divs to create columns */
 .column {
     float: left;
     width: 33.33%;
@@ -116,6 +111,7 @@ button:hover {
 
 }
 
+/* Text fields */
 input {
   padding: 6px;
   position: relative;
@@ -123,22 +119,15 @@ input {
 
 }
 
-/*    -webkit-transition: opacity .2s;
-   transition: opacity .2s;
-   opacity: 0;
-   display: block;
-   cursor: grab;
-   color: #c00;
-   top: 3px;
-   right: 10px;
-   position: absolute;
-   font-style: normal; */
+/* Hidden links to FantasyPros */
 a {
     color: transparent;
     text-decoration: none;
     position: absolute;
-    -webkit-transition: opacity .2s;
-    transition: opacity .2s;
+    position: center;
+    height: 100%;
+    width: 70%;
+    display: block;
 }
 
 a:hover

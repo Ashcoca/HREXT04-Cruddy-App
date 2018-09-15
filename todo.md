@@ -54,11 +54,13 @@ App idea - Creating a fantasy football rankings append
 - [ ] - Click on player to show chart with points scored over previous weeks
 
 - Bugs
-- [ ] - Fix font issues (replace font entirely?)
+- [ ] - Fix font issues - letter c shows up as lowercase (replace font entirely?)
 - [x] - Sometimes when adding player and then not moving from 1 spot that player
         will auto move down a few ranks. Figure out why and fix.
 - [ ] - Figure way to correct for players with same names for FantasyPros links
-- [ ] - Fix issue with ordered list being messed up (create separate storage per position)
+- [x] - Fix issue with ordered list being messed up (create separate storage per position)
+- [x] - Fix issue with list and invisible link creating havoc with sorting
+- [x] - Fix issue with invisible link appending value into sorted list - substring(11)
 
 
 

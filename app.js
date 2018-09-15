@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   //opening animations
   $('h1').addClass('animated fadeInDown');
-  // $('ol').hide().delay(700).fadeIn(500);
+
   $('#qb').hide().delay(600).fadeIn(500);
   $('.qb-input-title').hide().delay(600).fadeIn(500);
   $('.add-qb').hide().delay(600).fadeIn(500);
@@ -18,11 +18,11 @@ $(document).ready(function() {
   $('.add-wr').hide().delay(1000).fadeIn(1000);
   $('#sortablewr').hide().delay(1000).fadeIn(1000);
 
-  //loop to generate each sortable list
+  //loop to generate each sortable list on page load
   for (var i = 0; i < localStorage.length; i++){
     var key = localStorage.key(i);
     var position = localStorage.getItem(key);
-    if (key === localStorage) { continue }
+    if (key == localStorage) { continue }
     if (position == "QB") {
       $('#sortableqb').append('<li class="sortable-item"> ' + key + '<i class="js-remove">✖</i></ul>');
     }
@@ -67,7 +67,7 @@ $(document).ready(function() {
   //To store list and changes in local storage
   var sortableList = Sortable.create(sortableqb, {
   sort: true,
-  group: "localStorage",
+  group: "localStorageqb",
 	store: {
 		get: function (sortable) {
 			var order = localStorage.getItem(sortable.options.group.name);
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		filter: '.js-remove',
 		onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        localStorage.removeItem(evt.item.textContent.substr(11).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
       }
 			evt.item.parentNode.removeChild(evt.item);
 		}
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   var sortableList = Sortable.create(sortablerb, {
   sort: true,
-  group: "localStorage",
+  group: "localStoragerb",
   store: {
     get: function (sortable) {
       var order = localStorage.getItem(sortable.options.group.name);
@@ -105,7 +105,7 @@ $(document).ready(function() {
     filter: '.js-remove',
     onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        localStorage.removeItem(evt.item.textContent.substr(11).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
       }
       evt.item.parentNode.removeChild(evt.item);
     }
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
   var sortableList = Sortable.create(sortablewr, {
   sort: true,
-  group: "localStorage",
+  group: "localStoragewr",
   store: {
     get: function (sortable) {
       var order = localStorage.getItem(sortable.options.group.name);
@@ -128,7 +128,7 @@ $(document).ready(function() {
     filter: '.js-remove',
     onFilter: function (evt) {
       for (var i = 0; i < localStorage.length -1; i++){
-        localStorage.removeItem(evt.item.textContent.substr(11).slice(0, -1));
+        localStorage.removeItem(evt.item.textContent.substr(1).slice(0, -1));
       }
       evt.item.parentNode.removeChild(evt.item);
     }
@@ -137,7 +137,7 @@ $(document).ready(function() {
   $( "li" ).hover(
     function() {
       var players = $(this).text().substr(1).slice(0, -1).replace(' ', '-').toLowerCase();
-      $(this).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php title="See player profile on FantasyPros">0000000000</a>' ) );
+      $(this).prepend( $( '<a href=https://www.fantasypros.com/nfl/players/' + players + '.php title="See player profile on FantasyPros"></a>' ) );
     }, function() {
     $( this ).find( "a:last" ).remove();
   });
